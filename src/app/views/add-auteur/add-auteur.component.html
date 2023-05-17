@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <div style="text-align: center;"><h1>Auteur form</h1></div>
+    <div class="form-group">
+        <label for="nom">nom</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="auteur!.nom" name="nom" aria-describedby="nom" placeholder="Enter nom">
+    </div>
+    
+
+    
+    <div class="form-group">
+        <label for="Prenom">Prenom</label>
+        <input type="text" class="form-control" id="prenom" [(ngModel)]="auteur!.prenom" name="prenom" aria-describedby="prenom" placeholder="Enter prenom">
+    </div>
+    <div class="form-group">
+        <label for="nationalite" >nationalite</label>
+        <input type="text" class="form-control" id="nationalite"  [(ngModel)]="auteur!.nationalite" name="nationalite" aria-describedby="nationalite" placeholder="Enter Description">
+    
+      </div>
+
+    <button type="submit" class="btn btn-success">Add Auteur</button>
+</form>

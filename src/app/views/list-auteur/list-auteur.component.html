@@ -1,0 +1,30 @@
+<!-- <div>
+<h3>LIST PRODUCTS</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illo dignissimos fuga tempora tenetur modi, adipisci reiciendis ducimus, ipsa impedit at atque porro harum accusantium placeat dolore ut sapiente eum!</p>
+</div> -->
+<h1 align="center">{{welcome}}</h1>
+<br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Nationalite</th>
+        
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of auteurs | async">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.nom}}</td>
+        <td>{{p.prenom}}</td>
+        <td>{{p.nationalite}}</td>
+       
+        <td><button (click)="deleteAuteur(p.id)" type="button" class="btn btn-danger">Delete</button>
+          <button  (click)="update(p.id)" type="button" class="btn btn-warning mx-2">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
